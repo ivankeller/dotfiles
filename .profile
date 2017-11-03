@@ -4,21 +4,21 @@ if [ "$BASH" ]; then
   fi
 fi
 
-function proml
-{
-        case $TERM in
-                xterm*) local TITLEBAR='\[\033]0;\d \t \w\007\]' ;;
-                *)      local TITLEBAR='' ;;
-        esac
-PS1="${TITLEBAR}\
-\[\033[31m\]
-CCA\[\033[39m\][\w]\
-\n>"
-PS2='$ '
-PS4='+ '
-}
-proml
-unset proml
+#function proml
+#{
+#        case $TERM in
+#                xterm*) local TITLEBAR='\[\033]0;\d \t \w\007\]' ;;
+#                *)      local TITLEBAR='' ;;
+#        esac
+#PS1="${TITLEBAR}\
+#\[\033[31m\]
+#CCA\[\033[39m\][\w]\
+#\n>"
+#PS2='$ '
+#PS4='+ '
+#}
+#proml
+#unset proml
 
 export LC_NUMERIC="en_US.UTF-8"
 
@@ -82,11 +82,6 @@ HISTFILESIZE=10000
 
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 export PATH=$PATH:~/services/mongodb-linux-x86_64-ubuntu1404-3.2.10/bin/
-
-source /usr/share/bash-completion/completions/git
-source /etc/bash_completion.d/git-prompt
-GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='(\@) \u [\w]$(__git_ps1) # '
 
 export http_proxy=http://lhvbdab8:1234
 export https_proxy=https://lhvbdab8:1234
